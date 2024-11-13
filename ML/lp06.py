@@ -6,7 +6,7 @@ import seaborn as sns
 from scipy.cluster.hierarchy import dendrogram, linkage
 
 # Load the dataset
-url = '/kaggle/input/jaalnockdatasets/Hitters.csv'  # Replace with the correct file path
+url = './Datasets/Hitters.csv'  # Replace with the correct file path
 data = pd.read_csv(url)
 
 # Handle missing data
@@ -23,8 +23,8 @@ data['NewLeague'] = label_encoder.fit_transform(data['NewLeague'])
 # Select the relevant features for clustering (we focus on CRuns column as mentioned)
 X = data[['CRuns']].values
 
-# Perform Hierarchical Clustering
-model = AgglomerativeClustering(n_clusters=3, affinity='euclidean', linkage='ward')
+# Perform Hierarchical Clustering (no need for affinity='euclidean' when using 'ward' linkage)
+model = AgglomerativeClustering(n_clusters=3, linkage='ward')
 data['Cluster'] = model.fit_predict(X)
 
 # Plotting the dendrogram
