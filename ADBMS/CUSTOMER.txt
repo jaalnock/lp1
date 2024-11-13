@@ -1,0 +1,57 @@
+[
+    {
+        "Cust_No": 1001,
+        "First_Name": "Aarav",
+        "Last_Name": "Sharma",
+        "Address": "MG Road",
+        "City": "Bangalore",
+        "State": "KARNATAKA",
+        "Pincode": 560001,
+        "B_Date": "1990-05-14",
+        "Status": "Married"
+    },
+    {
+        "Cust_No": 1002,
+        "First_Name": "Meera",
+        "Last_Name": "Nair",
+        "Address": "MG Road",
+        "City": "Thiruvananthapuram",
+        "State": "KERALA",
+        "Pincode": 695001,
+        "B_Date": "1985-03-22",
+        "Status": "Married"
+    },
+    {
+        "Cust_No": 1003,
+        "First_Name": "Rahul",
+        "Last_Name": "Kulkarni",
+        "Address": "Shivajinagar",
+        "City": "Pune",
+        "State": "MAHARASHTRA",
+        "Pincode": 411016,
+        "B_Date": "1993-11-12",
+        "Status": "Unmarried"
+    },
+    {
+        "Cust_No": 1004,
+        "First_Name": "Sanya",
+        "Last_Name": "Iyer",
+        "Address": "Whitefield",
+        "City": "Bangalore",
+        "State": "KARNATAKA",
+        "Pincode": 560066,
+        "B_Date": "1998-07-18",
+        "Status": "Divorcee"
+    },
+    {
+        "Cust_No": 1005,
+        "First_Name": "Krishna",
+        "Last_Name": "Rao",
+        "Address": "Kochi",
+        "City": "Kochi",
+        "State": "KERALA",
+        "Pincode": 682011,
+        "B_Date": "1995-09-09",
+        "Status": "Unmarried"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "order_id": 1,
+        "customer_name": "John Doe",
+        "age": 30,
+        "mob_no": "9876543210",
+        "products": [
+            { "product_name": "Shoes", "quantity": 1 },
+            { "product_name": "Bag", "quantity": 2 }
+        ]
+    },
+    {
+        "order_id": 2,
+        "customer_name": "Jane Smith",
+        "age": 25,
+        "mob_no": "8765432109",
+        "products": [
+            { "product_name": "Shoes", "quantity": 3 },
+            { "product_name": "Watch", "quantity": 1 }
+        ]
+    },
+    {
+        "order_id": 3,
+        "customer_name": "ABC",
+        "age": 35,
+        "mob_no": "7654321098",
+        "products": [
+            { "product_name": "Laptop", "quantity": 1 },
+            { "product_name": "Headphones", "quantity": 1 }
+        ]
+    },
+    {
+        "order_id": 4,
+        "customer_name": "Emily Davis",
+        "age": 28,
+        "mob_no": "6543210987",
+        "products": [
+            { "product_name": "Shoes", "quantity": 2 },
+            { "product_name": "Phone", "quantity": 1 }
+        ]
+    },
+    {
+        "order_id": 5,
+        "customer_name": "Michael Brown",
+        "age": 40,
+        "mob_no": "5432109876",
+        "products": [
+            { "product_name": "Shoes", "quantity": 1 },
+            { "product_name": "Tablet", "quantity": 3 }
+        ]
+    }
+]

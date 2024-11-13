@@ -1,0 +1,98 @@
+[
+    {
+        "empid": 101,
+        "ename": "Amit Sharma",
+        "city": "Mumbai",
+        "educational_background": "MBA",
+        "salary": 40000,
+        "post": "Manager",
+        "join_date": "2018-05-14",
+        "leaving_date": null,
+        "skills": ["Leadership", "Communication"],
+        "department": "Administrative"
+    },
+    {
+        "empid": 102,
+        "ename": "Sneha Patil",
+        "city": "Pune",
+        "educational_background": "MCA",
+        "salary": 35000,
+        "post": "Developer",
+        "join_date": "2020-06-10",
+        "leaving_date": null,
+        "skills": ["Java", "Python"],
+        "department": "IT"
+    },
+    {
+        "empid": 103,
+        "ename": "Rajesh Kumar",
+        "city": "Ahmedabad",
+        "educational_background": "B.Com",
+        "salary": 28000,
+        "post": "Accountant",
+        "join_date": "2017-03-22",
+        "leaving_date": "2023-02-15",
+        "skills": ["Accounting", "Excel"],
+        "department": "Account"
+    },
+    {
+        "empid": 104,
+        "ename": "Priya Mehta",
+        "city": "Bangalore",
+        "educational_background": "B.Tech",
+        "salary": 42000,
+        "post": "Engineer",
+        "join_date": "2019-07-01",
+        "leaving_date": null,
+        "skills": ["C++", "SQL"],
+        "department": "CSE"
+    },
+    {
+        "empid": 105,
+        "ename": "Nikita Rao",
+        "city": "Chennai",
+        "educational_background": "M.Tech",
+        "salary": 46000,
+        "post": "Data Analyst",
+        "join_date": "2021-11-11",
+        "leaving_date": null,
+        "skills": ["Python", "Data Analysis"],
+        "department": "ET"
+    },
+    {
+        "empid": 106,
+        "ename": "Vikas Joshi",
+        "city": "Delhi",
+        "educational_background": "BBA",
+        "salary": 31000,
+        "post": "HR",
+        "join_date": "2022-08-15",
+        "leaving_date": null,
+        "skills": ["Recruitment", "Management"],
+        "department": "Administrative"
+    },
+    {
+        "empid": 107,
+        "ename": "Manoj Singh",
+        "city": "Mumbai",
+        "educational_background": "MBA",
+        "salary": 36000,
+        "post": "IT Specialist",
+        "join_date": "2021-05-18",
+        "leaving_date": null,
+        "skills": ["Networking", "IT Support"],
+        "department": "IT"
+    },
+    {
+        "empid": 108,
+        "ename": "Sara Khan",
+        "city": "Hyderabad",
+        "educational_background": "BCA",
+        "salary": 34000,
+        "post": "Librarian",
+        "join_date": "2020-02-10",
+        "leaving_date": null,
+        "skills": ["Cataloging", "Organization"],
+        "department": "Library"
+    }
+]
