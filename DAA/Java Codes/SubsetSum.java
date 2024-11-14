@@ -1,62 +1,45 @@
-//package Practicals;
+// package Practicals;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class SubsetSum {
-    // Function to print all subsets with the given sum
-    static void printSubsetSum(int i, int n, int[] set,
-                               int targetSum, List<Integer> subset)
-    {
-        // If targetSum is zero, then there exists a subset.
-        if (targetSum == 0) {
-            // Prints a valid subset
-            System.out.print("[ ");
-            for (int j = 0; j < subset.size(); j++) {
-                System.out.print(subset.get(j) + " ");
-            }
-            System.out.println("]");
+public class SubsetSum{
+    static ArrayList<ArrayList<Integer>> ls;
+
+    public static void getSubSets(int[] arr, int n, int target, ArrayList<Integer> res){
+        if(target == 0) {
+            ls.add(new ArrayList<>(res));
             return;
         }
 
-        if (i == n) {
-            // Return if we have reached the end of the array
-            return;
-        }
+        if(n == 0 || target < 0) return;
 
-        // Not considering the current element
-        printSubsetSum(i + 1, n, set, targetSum, subset);
+        //not include
+        getSubSets(arr, n-1, target, res);
 
-        // Consider the current element if it is less than or equal to the targetSum
-        if (set[i] <= targetSum) {
-            // Push the current element in the subset
-            subset.add(set[i]);
-
-            // Recursive call for considering the current element
-            printSubsetSum(i + 1, n, set, targetSum - set[i], subset);
-
-            // Pop-back element after the recursive call to restore the subset's original configuration
-            subset.remove(subset.size() - 1);
+        //included
+        if(arr[n-1] <= target) {
+            res.add(arr[n - 1]);
+            getSubSets(arr, n - 1, target - arr[n - 1], res);
+            res.removeLast();
         }
     }
 
-    // Driver code
     public static void main(String[] args) {
-        // Test case 1
-        int[] set1 = {1, 2, 1};
-        int sum1 = 3;
-        int n1 = set1.length;
-        List<Integer> subset1 = new ArrayList<>();
-        System.out.println("Output 1:");
-        printSubsetSum(0, n1, set1, sum1, subset1);
-        System.out.println();
+        ls = new ArrayList<>();
+        int n = 5;
+        int[]  arr = {1,2,3,5,2};
+        int target = 5;
+        getSubSets(arr, n, target, new ArrayList<>());
 
-//        // Test case 2
-//        int[] set2 = {3, 34, 4, 12, 5, 2};
-//        int sum2 = 30;
-//        int n2 = set2.length;
-//        List<Integer> subset2 = new ArrayList<>();
-//        System.out.println("Output 2:");
-//        printSubsetSum(0, n2, set2, sum2, subset2);
+        if(!ls.isEmpty()){
+            for(ArrayList<Integer> ans : ls){
+                for(Integer x : ans){
+                    System.out.print(x+" ");
+                }
+                System.out.println();
+            }
+        }else{
+            System.out.println("No such target is possible");
+        }
     }
 }

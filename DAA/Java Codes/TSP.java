@@ -97,6 +97,7 @@ public class TSP {
     }
 
     // Function to calculate the cost of the reduced matrix
+    // this is lowerbound
     public static int costCal(int[][] matrixReduced) {
         int cost = 0;
         int N = matrixReduced.length;
@@ -184,4 +185,19 @@ public class TSP {
         System.out.println("\nTotal Cost :: " + result + "\n");
     }
 }
+
+// Enter the number of vertices: 4
+// Enter the cost matrix:
+// 0   10   15   20
+// 5    0   35   25
+// 15  35    0   30
+// 20  25   30    0
+
+// Path taken: 
+// 1->3
+// 3->4
+// 4->2
+// 2->1
+
+// Total Cost :: 75
 
