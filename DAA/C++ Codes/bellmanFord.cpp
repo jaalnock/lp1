@@ -1,13 +1,19 @@
-#include <iostream>
-#include <vector>
+ #include <iostream>
 #include <climits> // For INT_MAX
 
 using namespace std;
 
+// Global variables
+int n, m, src;
+int edges[100][3]; // Assuming a maximum of 100 edges
+int dist[100];     // Assuming a maximum of 100 vertices
+
 // Function to implement the Bellman-Ford algorithm
-void bellmanFord(int n, int m, int src, vector<vector<int>> &edges) {
+void bellmanFord() {
     // Step 1: Initialize distances from source to all other vertices as infinite
-    vector<int> dist(n + 1, INT_MAX);
+    for (int i = 1; i <= n; i++) {
+        dist[i] = INT_MAX;
+    }
     dist[src] = 0; // Distance from source to itself is 0
 
     // Step 2: Relax all edges n-1 times
@@ -18,7 +24,7 @@ void bellmanFord(int n, int m, int src, vector<vector<int>> &edges) {
             int wt = edges[j][2]; // Weight of the edge
 
             // Relaxation step
-            if (dist[u] != INT_MAX && dist[u ] + wt < dist[v]) {
+            if (dist[u] != INT_MAX && dist[u] + wt < dist[v]) {
                 dist[v] = dist[u] + wt;
             }
         }
@@ -48,8 +54,6 @@ void bellmanFord(int n, int m, int src, vector<vector<int>> &edges) {
 }
 
 int main() {
-    int n, m, src;
-
     // Input for number of vertices and edges
     cout << "Number of vertices (n): ";
     cin >> n;
@@ -58,13 +62,14 @@ int main() {
     cout << "Source vertex: ";
     cin >> src;
 
-    vector<vector<int>> edges(m, vector<int>(3)); // 2D vector to store edges
+    // Input edges
     cout << "Enter edges (u, v, weight):\n";
     for (int i = 0; i < m; i++) {
         cin >> edges[i][0] >> edges[i][1] >> edges[i][2];
     }
 
-    bellmanFord(n, m, src, edges);
+    // Call the Bellman-Ford algorithm
+    bellmanFord();
 
     return 0;
 }
